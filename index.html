@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한라이프</title>
+  <style>
+    /* CSS RESET */
+    *{margin:0;border:none;padding:0;}
+    a,div,span,h1,h2,h3,h4,h5,h6,p,header,section,footer,nav,article,aside,address,ul,ol,li,input,select,option,button,strong,u,i{font-weight:400;font-size:14px;color:#333;text-decoration:none;vertical-align:baseline;}
+    img{width:100%;vertical-align:top;}
+    a{text-decoration:none;color:#333;}
+    ul,ol,li{list-style:none;}
+    .clearfix::after{content:'';display:block;clear:both;}
+
+    /* CSS DEFAULT */
+    @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    body{font-family: 'Noto Sans KR', sans-serif;}
+    .black_font{font-family: 'Black Han Sans', sans-serif;}
+    .wrap{box-sizing:border-box;width:1200px;margin:0 auto;}
+
+    /* HEADER CSS */
+    .header>div{width:120px;margin:0 auto;padding: 15px 0;}
+    .main_nav{text-align:center;padding:12px 0;background-color:green;}
+    .main_nav ul{display:inline-block;}
+    .main_nav li{display:inline-block;padding:0 25px;}
+    .main_nav li a{font-weight:bold;font-size:24px;color:white;transition:0.3s;}
+    .main_nav li a:hover{color:red;}
+    
+    /* SECTION CSS */
+        /* BANNER ARTICLE */
+    .banner{position:relative;height:500px;background-color:blue;}
+    .banner>h2{padding-top:36px;font-weight:bold;font-size:48px;color:white;text-align:center;}
+    .pop_up{position:absolute;left:50%;top:50%;transform:translate(-50%,-30%);background-color:white;width:800px;padding:20px;}
+    form>div{float:left;width:35%;}
+    form>div:nth-child(3){width:20%;}
+    form>div:nth-child(4){width:10%;}
+    form>div>label{display:block;margin-bottom:10px;font-size:18px;color:green;}
+    label[for="men"],label[for="girl"]{display:inline-block;width:50px;border:1px solid black;padding:6px 10px 10px;font-size:12px;color:#333;text-align:right;}
+    label[for="men"]::before,label[for="girl"]::before{content:'';display:inline-block;width:10px;height:10px;margin-right:16px;}
+    label[for="men"]::before{background-image:url('images/men.png');background-repeat:no-repeat;background-size:cover;}
+    label[for="girl"]::before{background-image:url('images/girl.png');background-repeat:no-repeat;background-size:cover;}
+    select,input[type="text"]{width:80%;border:1px solid black;padding:6px 10px 10px;}
+    input[type="text"]{width:60%}
+    input[type="radio"]{display:none;}
+    input[type="radio"]:checked+label{border:white;background-color:#333;color:white;}
+    button{width:100%;height:71px;color:white;font-size:20px;background-color:green;cursor:pointer;}
+        /* CONTENT ARTICLE */
+            /* CONTENT TOP */
+    .content{padding:20px;height:604px;}
+    .content>h3{font-size:36px;text-align:center;margin-bottom:30px;font-weight:bolder;}
+    .content>ul,.content_bottom,.content_bottom>div{padding:30px 0;}
+    .content>ul>li{float:left;width:25%;text-align:center;}
+    .content>ul>li a img{display:block;width:25%;margin:0 auto 10px;}
+            /* CONTENT_BOTTOM */
+    .content_bottom>div,.content_bottom>ul{float:left;width:50%;}
+    .content_bottom h4{margin-bottom:20px;font-weight:bold;font-size:20px;text-align:center;}
+    .content_bottom p{width:70%;margin:0 auto;text-align:center;font-size:16px;}
+    .content_bottom>ul>li{width:70%;margin:0 auto 30px;padding:10px 0;background:green;text-align:center;}
+    .content_bottom>ul>li>a{font-size:18px;color:#fff;}
+
+    /* FOOTER CSS */
+        /* FOOTER TOP */
+    .footer_top{background:#f9f9f9;padding:30px 0;}
+    .footer_top>ul>li{float:left;width:25%;text-align:center;font-size:20px;}
+    .sub_menu{padding-top:10px;}
+    .sub_menu li{padding:5px 0 5px 112px;text-align:left;}
+    .sub_menu02 li{padding-left:105px;text-align:left;}
+        /* FOOTER BOTTOM */
+    .footer_bottom{background:#ccc;padding:30px 0;}
+    .footer_bottom>div{float:left;}
+    .footer_logo{width:10%;padding-top:20px;text-align:center;}
+    .footer_logo>img{width:50%;}
+    address{font-style:normal;padding-top:10px;}
+    .footer_bottom>.icons{float:right;}
+    .icons>span{display:inline-block;width:60px;height:60px;margin-right:15px;border-radius:50%;text-indent:-99999px;}
+    .icons>span:nth-child(1){background:url('images/insta.png') no-repeat;background-size:cover;}
+    .icons>span:nth-child(2){background:url('images/you.png') no-repeat;background-size:cover;}
+    .icons>span:nth-child(3){background:url('images/you.png') no-repeat;background-size:cover;margin-right:30px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- HEADER SECTIIN -->
+    <header class="header">
+      <div>
+        <a href="#">
+          <img src="images/logo.png" alt="로고">
+        </a>
+      </div>
+      <nav class="main_nav">
+        <ul>
+          <li><a href="#">상품소개</a></li>
+          <li><a href="#">혜택서비스</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">공시실</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- CONTENT SECTION -->
+    <section class="section">
+      <article class="banner">
+        <h2>우리 가족 모두를 위한 인생 설계</h2>
+        <div class="pop_up">
+          <form class="clearfix">
+            <div>
+              <label for="item_sel">상품선택</label>
+              <select name="item_sel" id="item_sel">
+                <option>상품을 선택하세요</option>
+                <option>정기보험</option>
+                <option>종신보험</option>
+                <option>손해보험</option>
+                <option>상해보험</option>
+                <option>자동차보험</option>
+                <option>운전자보험</option>
+                <option>의료실비보험</option>
+              </select>
+            </div>
+            <div>
+              <label for="birth">생년월일을 입력하세요</label>
+              <input type="text" name="birth" id="birth" placeholder="생년월일(예:19990101)">
+            </div>
+            <div>
+              <label>성별을 선택하세요</label>
+              <input type="radio" name="sex" id="men">
+              <label for="men">남성</label>
+              <input type="radio" name="sex"" id="girl" checked>
+              <label for="girl">여성</label>
+            </div>
+            <div>
+              <button>확인</button>
+            </div>
+          </form>
+        </div>
+      </article>
+      <article class="content">
+        <h3 class="black_font">한생명과 함께 당신의 내일을 준비하세요</h3>
+        <ul class="clearfix">
+          <li>
+            <a href="#">
+              <img src="images/life01.jpg" alt="life01">
+              사망보장
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/life02.jpg" alt="life02">
+              연금보장
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/life03.jpg" alt="life03">
+              질병보장
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/life04.jpg" alt="life04">
+              노후보장
+            </a>
+          </li>
+        </ul>
+        <div class="content_bottom clearfix">
+          <div>
+            <h4>든든한 사망보장으로 가족의 든든 미래를<br>설계하세요</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur<br>adipisicing elit. Quo at impedit<br>nesciunt odit, ea eveniet<br>voluptas nisi quos? Ex maiores ullam<br>saepe veritatis labore quos ipsum est<br>voluptates nisi enim?</p>
+          </div>
+          <ul>
+            <li><a href="#">우리가족 든든 종신보험</a></li>
+            <li><a href="#">무배당 아리안즈 종신보험</a></li>
+            <li><a href="#">죽어나 나오는 종신보험</a></li>
+            <li><a href="#">다처도 나오는 종심보험</a></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+      <div class="footer_top">
+        <ul class="clearfix">
+          <li>
+            상품소개
+            <ul class="sub_menu sub_menu01">
+              <li><a href="#">히트상품</a></li>
+              <li><a href="#">신상품</a></li>
+              <li><a href="#">판매중지상품</a></li>
+            </ul>
+          </li>
+          <li>
+            혜택서비스
+            <ul class="sub_menu sub_menu02">
+              <li><a href="#">회원혜택</a></li>
+              <li><a href="#">VIP회원혜택</a></li>
+            </ul>
+          </li>
+          <li>고객안내</li>
+          <li>
+            회사소개
+            <ul class="sub_menu sub_menu04">
+              <li><a href="#">회사연혁</a></li>
+              <li><a href="#">대표인사말</a></li>
+              <li><a href="#">조직도</a></li>
+              <li><a href="#">찾오오시는길</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_bottom clearfix">
+        <div class="footer_logo">
+          <img src="images/logo.png" alt="logo">
+        </div>
+        <div>
+          <address>
+            <p>서울특별시 관악구 신림대로278-6(신림빌딩 201호, 신림동)</p>
+            <p>Copyright : Hong Gil Dong</p>
+          </address>
+        </div>
+        <div class="icons">
+          <span>facebook</span>
+          <span>instar</span>
+          <span>youtube</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
